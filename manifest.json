@@ -1,0 +1,25 @@
+{
+  "manifest_version": 2,
+  "name": "More than tabs",
+  "version": "1.1",
+  "description": "No more tabs",
+  "permissions": ["tabs", "storage"],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": true
+  },
+  "browser_action": {
+    "default_title": "More than tabs",
+    "default_popup": "popup.html",
+    "default_icon": "daemon.png"
+  },
+  "icons": {
+    "128": "daemon.png"
+  },
+  "applications": {
+    "gecko": {
+      "id": "more-than-tabs@felipe",
+      "strict_min_version": "91.0"
+    }
+  }
+}

@@ -1,0 +1,95 @@
+/* ---------- Paleta inspirada no uBlock Origin ---------- */
+:root {
+  --bg-main: #2d2d2d;
+  --bg-header: #252525;
+  --bg-button-on: #3fa0ff;  /* azul vivo */
+  --bg-button-off: #555;
+  --txt-main: #e6e6e6;
+  --txt-muted: #b0b0b0;
+  --accent-hover: #63b4ff;
+  --radius: 8px;
+  --shadow: 0 2px 6px rgba(0,0,0,.45);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  color: var(--txt-main);
+  background: var(--bg-main);
+  min-width: 260px;
+}
+
+/* ----- topo ----- */
+.header {
+  background: var(--bg-header);
+  padding: 6px 10px;
+  border-bottom: 1px solid #000;
+  text-align: center;
+}
+
+.header-title {
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: .1px;
+}
+
+/* ----- conteúdo ----- */
+.content {
+  padding: 18px 14px 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.power-button {
+  border: none;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--bg-button-on); /* cor trocada via JS */
+  box-shadow: var(--shadow);
+  transition: background .25s ease, transform .2s ease;
+  cursor: pointer;
+}
+
+.power-button:hover {
+  transform: scale(1.06);
+}
+
+.power-button img {
+  width: 34px;
+  height: 34px;
+  pointer-events: none;
+  filter: brightness(0) invert(1); /* mantém ícone claro */
+}
+
+.status {
+  margin-top: 12px;
+  font-size: 13px;
+  color: var(--txt-muted);
+}
+
+/* ----- rodapé ----- */
+.footer {
+  display: flex;
+  justify-content: flex-end;
+  padding: 6px 10px 8px;
+}
+
+.footer a {
+  /* display: inline-flex;
+  border-radius: var(--radius);
+  padding: 4px 6px; */
+  transition: background .2s ease;
+}
+
+.footer a:hover {
+  background: #3d3d3d;
+}
